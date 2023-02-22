@@ -1,0 +1,36 @@
+{
+  "name": "vue3-tool-box",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [
+    "Vue3",
+    "vite",
+    "vertify-slider",
+    "vue3-vertify-slider"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/vue3-tool-box.umd.js",
+  "module": "lib/vue3-tool-box.mjs",
+  "exports": {
+    "./lib/style.css": "./lib/style.css",
+    ".": {
+      "import": "./lib/vue3-tool-box.mjs",
+      "require": "./lib/vue3-tool-box.umd.js"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.0"
+  }
+}
