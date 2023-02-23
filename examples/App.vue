@@ -1,6 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import { vertifySlide } from '../packages';
+import { VertifySlide } from '../packages';
 
 </script>
 
@@ -13,7 +13,7 @@ import { vertifySlide } from '../packages';
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <vertifySlide></vertifySlide>
+  <VertifySlide></VertifySlide>
   <HelloWorld msg="Vite + Vue" />
 </template>
 

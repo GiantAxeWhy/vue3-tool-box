@@ -1,13 +1,13 @@
-import vertifySlide from "./vertify-slide";
+import VertifySlide from "./VertifySlide";
 
 //按需引入
-export { vertifySlide };
+export { VertifySlide };
 
-const components = [vertifySlide];
+const components = [VertifySlide];
 
 const install = (App) => {
   components.forEach((item) => {
-    App.component(item.__name, item);
+    App.component(item.name, item);
   });
 };
 
