@@ -16,6 +16,7 @@
   </head>
   <body>
     <div id="app"></div>
+    <div id="container"></div>
     <script>
       window.$docsify = {
         name: "组件库",
@@ -35,5 +36,38 @@
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+    <script>
+      var secret = "↑↑↓↓←→←→BA";
+      var keyMap = {
+        37: "←",
+        38: "↑",
+        39: "→",
+        40: "↓",
+        66: "B",
+        65: "A",
+      };
+      var input = [];
+      var activated = false;
+      var roll = function () {};
+      window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 13) {
+          roll();
+          return;
+        }
+        input.push(keyMap[e.keyCode] || "");
+        if (input.length > secret.length) {
+          input.shift();
+        }
+        if (input.join("") === secret) {
+          activated = true;
+          var script = document.createElement("script");
+          script.src = "roll-dice.js";
+          script.onload = function () {
+            roll = window.initRollDice("container");
+          };
+          document.body.appendChild(script);
+        }
+      });
+    </script>
   </body>
 </html>
