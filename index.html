@@ -9,5 +9,10 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/examples/main.js"></script>
+    <script src="./packages/elementStart/index.js"></script>
+    <custom-element-start
+      :value="data"
+      @change="(e) => { data = e.detail }"
+    ></custom-element-start>
   </body>
 </html>

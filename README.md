@@ -69,3 +69,8 @@ verfitySlide 方法为验证成功回调的方法
 ## 许可证
 
 本组件采用 MIT 许可证。请查看 LICENSE 文件以获取更多信息。
+
+## github 仓库
+
+欢迎下载使用 更个性化适配自己的场景
+https://github.com/GiantAxeWhy/vue3-tool-box
